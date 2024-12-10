@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+}
+
+body:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/backGround.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; 
+    z-index: -1;
+}
+
+/*cabeçalho*/
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+
+header .container{
+    display: flex;
+    width: 1620px;
+    height: 60px;
+}
+
+nav{
+    flex: 1;
+    display: flex;
+    align-items: center
+}
+
+nav li a{
+    color: #fff;
+    text-decoration: none;
+
+}
+
+nav li a:hover, .change:hover{
+    color: rgba(201, 143,165, 0.5);
+}
+.navegation{
+    display: flex;
+    font-size: 20px;
+    padding: 15px 30px;
+}
+
+.item{
+    flex: 1;
+    padding-left: 27px;
+}
+
+
+.languages{
+    padding: 15px 30px ;
+    margin-right: 27px;
+}
+.change{
+    display: flex;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
