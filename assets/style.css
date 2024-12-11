@@ -3,6 +3,8 @@
     padding: 0;
     list-style: none;
     box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
 }
 
 body{
@@ -20,7 +22,7 @@ body:before {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    opacity: 0.5; 
+    opacity: 0.4; 
     z-index: -1;
 }
 
@@ -35,44 +37,130 @@ header{
 header .container{
     display: flex;
     width: 1620px;
-    height: 60px;
+    height: 70px;
 }
 
 nav{
     flex: 1;
     display: flex;
-    align-items: center
+    align-items: center 
 }
 
 nav li a{
     color: #fff;
-    text-decoration: none;
+    font-size: 20px;
 
 }
 
 nav li a:hover, .change:hover{
-    color: rgba(201, 143,165, 0.5);
+    color: #e97575;
 }
 .navegation{
     display: flex;
-    font-size: 20px;
     padding: 15px 30px;
 }
 
 .item{
     flex: 1;
     padding-left: 27px;
+    font-size: 20px;
+    
 }
 
+.item a{
+    color: #f5a9a9;
+}
 
 .languages{
     padding: 15px 30px ;
     margin-right: 27px;
+    margin-top: 8px;
 }
 .change{
-    display: flex;
+    margin-top: 10px;
     font-size: 20px;
-    text-decoration: none;
-    color: #fff;
+    color: #f5a9a9;
+}
+
+/*HOME*/
+
+section{
+    display: flex;
+    justify-content: center;
+}
+
+
+section .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 1620px;
+    margin: 30px;
+    padding: 30px 60px ;
+}
+
+.logoSpace{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+.fullLogo{
+    align-items: start;
+    width: 250px;
+    height: 200px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-content: start;
+    width: 540px;
+    font-size: 17px;
+    margin-top: 30px;
+}
+
+h2{
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.subtitle{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.contact{
+    width: 250px;
+    height: 50px;
+    margin-top: 25px;
+    font-size: 17px;
+    background-color: #fca0b4 ;
+    border: 1px solid #fca0b4;
+    border-radius: 10px;
+    transition:  0.3s, transform 0.3s ease;
+}
+
+.contact a{
+    color: #ffeded;
+}
+.contact:hover{
+    background-color: #a693ff;
+    transition: 0.3s;
+    transform: translateY(-10px);
+}
+
+.person{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.imgPerson{
+    background-image: url('//images/logo.jpg');
+    width: 500px;
+    height: 550px;
 }
 
