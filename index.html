@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carolina</title>
     <link rel="stylesheet" href="assets/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 
 <body>
@@ -24,7 +25,7 @@
             </div>
         </div>
     </header>
-    <section>
+    <section class="initial">
         <div class="container">
             <div>
                 <div class="logoSpace">
@@ -33,7 +34,7 @@
                 <div class="text">
                     <h2>Adquira uma aparencia ainda mais jovem.</h2>
                     <h4 class="subtitle">Cortes de cabelo exclusivos, depilação a laser e
-                        esfoliação profunda para uma pele radiante e autoestima renovada.</b>
+                        tratamentos para uma pele radiante e autoestima renovada.</h4>
                 </div>
                 <button class="contact"><a href="">Agende um horário</a></button>
             </div>
@@ -45,24 +46,74 @@
     <section class="advertising-text">
         <div class="content">
             <h2>Você sente que a sua aparencia não reflete a sua beleza?</h2>
-            <p>Com o passar do tempo, é natural que o corpo mostre mudanças, como sinais na pele, fios opacos e cansaço. 
-                Mas isso não significa que você precise abrir mão da sua beleza e vitalidade. 
-                Com cortes de cabelo que renovam o visual, depilação a laser para uma pele macia e limpeza profunda que resgata o brilho, é possível se sentir renovada e confiante.
-            </br></br>
-            <p class="focus">Permita-se essa transformação! Agende seu horário e sinta-se renovada, bonita e confiante em todas as fases da vida.</p>
+            <p>Com o passar do tempo, é natural que o corpo mostre mudanças, como sinais na pele, fios opacos e cansaço.
+                Mas isso não significa que você precise abrir mão da sua beleza e vitalidade.
+                Com cortes de cabelo que renovam o visual, depilação a laser para uma pele macia e um tratamento facial
+                profundo que
+                resgata o brilho, é possível se sentir renovada e confiante.
+                </br></br>
+            <p class="focus">Permita-se essa transformação! Agende seu horário e sinta-se renovada, bonita e confiante
+                em todas as fases da vida.</p>
             <button class="contact"><a href="">Agende um horário</a></button>
-
         </div>
-
     </section>
     <main>
+        <div class="container">
+            <div class="content-main">
+                <p class="textTypeProcediments">Proedimentos realizados</p>
+                <h2>Procedimentos exclusivos para <strong>cada necessidade</strong></h2>
+                <p>Cada rosto tem uma história, e cada pessoa precisa de um tratamento único. <strong>Conheça nossos
+                        procedimentos:</strong></p>
+            </div>
+            <div class="procedments">
+                <div class="card">
+                    <img src="images/Hair.jpg" alt="Cabeleleira" loading="lazy">
+                    <h1>Hair</h1>
+                    <p>Renove seu visual com cortes precisos, cores vibrantes e modelagens únicas.</p>
+                </div>
+                <div class="card">
+                    <img src="images/laser.jpg" alt="Depilação" loading="lazy">
+                    <h1>Laser hair removal</h1>
+                    <p>Garanta uma pele suave e livre de pelos com resultados duradouras.</p>
 
+                </div>
+                <div class="card">
+                    <img src="images/skinCare.jpg" alt="Skin-Care" loading="lazy">
+                    <h1>facial treatment</h1>
+                    <p>Revitalize sua pele com hidratação profunda e tratamentos personalizados</p>
+                </div>
+            </div>
+            <div class="button"><button class="contact"><a href="">Agende um horário</a></button></div>
+        </div>
     </main>
-
-
+    <section class="hero">
+        <div class="container">
+            <div class="textResult">
+                <p>resultados</p>
+                <h2>Transformações inspiradoras.</h2>
+            </div>
+            <div class="contentCarrosel">
+                <i id="left" class="fa-solid fa-angle-left"></i>
+                <div class="wrapper">
+                    <div id="hide" class="carousel">
+                        <img src="images/result-hair1.jpg" alt="" draggable="false">
+                        <img src="images/hair-result2.jpg" alt=""  draggable="false">
+                        <img src="images/laser-result1.jpg" alt=""  draggable="false">
+                        <img src="images/laser-result2.jpg" alt=""  draggable="false">
+                        <img src="images/skinCare-resul1.jpg" alt=""  draggable="false">
+                        <img src="images/skinCare-result2.jpg" alt=""  draggable="false">
+                    </div>
+                </div>
+                <i id="right" class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="button"><button class="contact"><a href="">Agende um horário</a></button></div>
+        </div>    
+    </section>
+    
     <footer>
 
     </footer>
+    <script src="assets/js/script.js" defer></script>
 </body>
 
 </html>
