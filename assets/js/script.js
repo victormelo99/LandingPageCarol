@@ -1,3 +1,4 @@
+//CARROSEL RESULT
 const carousel = document.querySelector('.carousel');
 firstImg = carousel.querySelectorAll('img')[0];
 arrowIcons = document.querySelectorAll('.contentCarrosel i');
@@ -20,23 +21,6 @@ arrowIcons.forEach(icon => {
         setTimeout(() => showHidenIcons(), 60); //calling showHidenIcons after it
     });
 });
-
-const autoSlide = () => {
-    // if there is no image left to scroll then return from here
-    if(carousel.scrollLeft == (carousel.scrollWidth - carousel.clientWidth)) return;
-
-
-    positionDiff = Math.abs(positionDiff);// making positionDiff value to positive
-    let firstImgWidth = firstImg.clientWidth + 500;
-    // getting difference value that needs to add or reduce from carousel left to take middle img center 
-    let valDifference = firstImgWidth - positionDiff;
-
-    if(carousel.scrollLeft > prevScrollLeft) { // if user is scrolling to the right
-        return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-    }
-    // if user is scrooling to the left
-    carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-};
 
 const dragStart = (e) => {
     //updatatin global variables value on mouse down event
@@ -65,8 +49,6 @@ const dragStop = () => {
     autoSlide();
 }
 
-
-
 carousel.addEventListener('mousedown', dragStart);
 carousel.addEventListener('touchstart', dragStart);
 
@@ -76,3 +58,43 @@ carousel.addEventListener('touchmove', dragging);
 carousel.addEventListener('mouseup', dragStop);
 carousel.addEventListener('mouseleave', dragStop);
 carousel.addEventListener('touchend', dragStop);
+
+//AUTOMATIC CARROSEL REVIEW
+
+const carouselResult = document.querySelector('.carouselResult');
+const firstItem = carouselResult.querySelector('.area-review');
+const itemWidth = firstItem.offsetWidth + 65; 
+
+let autoScroll;
+
+carouselResult.style.scrollBehavior = 'smooth';
+
+const smoothScrollToStart = () => {
+    const scrollStep = carouselResult.scrollWidth / 60; 
+    const interval = setInterval(() => {
+        if (carouselResult.scrollLeft <= 0) {
+            clearInterval(interval); 
+        } else {
+            carouselResult.scrollLeft -= scrollStep;
+        }
+    }, 20); 
+};
+
+const startCarousel = () => {
+    autoScroll = setInterval(() => {
+        carouselResult.scrollBy({ left: itemWidth, behavior: 'smooth' });
+
+        if (carouselResult.scrollLeft + carouselResult.clientWidth >= carouselResult.scrollWidth) {
+            clearInterval(autoScroll); 
+            setTimeout(() => {
+                carouselResult.style.scrollBehavior = 'auto'; 
+                smoothScrollToStart();
+                setTimeout(startCarousel, 2000); 
+            }, 1500); 
+        }
+    }, 2000);
+};
+startCarousel();
+
+carouselResult.addEventListener('mouseenter', () => clearInterval(autoScroll));
+carouselResult.addEventListener('mouseleave', startCarousel);
