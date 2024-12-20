@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Inter&family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 * {
     margin: 0;
@@ -668,3 +669,52 @@ main .button {
     border-radius: 25px;
 }
 
+/*FOOTER*/
+footer{
+    background-color: #f1e6e6;
+}
+
+.content-footer{
+    display: flex;
+    padding-top: 30px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 1200px;
+}
+
+.content-footer>img{
+    width: 100px;
+    height: 100px;
+    padding-bottom: 20px;
+}
+
+.content-footer>h2{
+    font-size: 36px;
+}
+
+.contact-footer{
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.contact-footer .whatsappicon{
+    width: 15px;
+    height: 15px;
+}
+
+.insta{
+    padding-top: 10px;
+    width: 50px;
+    height: 50px;
+}
+.contact-footer>p{
+    font-family: "Manrope", serif;
+}
+
+.all-rights-reserved{
+    text-align: center;
+    padding-top: 30px;
+    align-content: center   ;
+}
