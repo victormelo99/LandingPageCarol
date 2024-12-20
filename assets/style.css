@@ -15,6 +15,8 @@ h2{
 }
 
 .container {
+    display: flex;
+    justify-content: center;
     width: 100%;
     margin: auto;
     max-width: 1620px;
@@ -25,13 +27,6 @@ h2{
 
 header {
     position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-
-header .container {
-    display: flex;
 }
 
 nav {
@@ -105,7 +100,6 @@ header:before,
 
 
 .initial .container {
-    display: flex;
     justify-content: space-between;
     align-items: start;
     width: 1620px;
@@ -183,8 +177,6 @@ h2 {
 /* TEXTO PROPAGANDA*/
 
 main .container {
-    display: flex;
-    justify-content: center;
     flex-direction: column;
 }
 
@@ -295,7 +287,6 @@ main .button {
 /*RESULTADOS*/
 
 .hero .container{
-    display: flex;
     align-items: center;
     flex-direction: column;
     margin-top: -80px ;
@@ -341,7 +332,6 @@ main .button {
     width: 45px;
     height: 45px;
     text-align: center;
-
     line-height: 45px;
     border-radius: 50%;
     cursor: pointer;
@@ -402,7 +392,6 @@ main .button {
 }
 
 .advertising .container{
-    display: flex;
     justify-content: space-between;
     padding-bottom: 100px;
 
@@ -461,7 +450,6 @@ main .button {
 .imgPerson2{
     display: flex;
     margin-top: 60px;
-
     justify-content: center;
     align-items: center;
     background-image: url('../images/backGRoundImgPerson2.jpg');
@@ -479,13 +467,12 @@ main .button {
     border-bottom-right-radius: 150px;
 }
 
-
 /*Adversiting 2*/
 
 .advertising2{
     height: 450px;
-    box-shadow: inset 0px -10px 10px -5px #ececec;
-
+    box-shadow: inset 0px 10px 50px -5px #bebebe;
+    
 }
 .advertising2 .container{
     display: flex;
@@ -542,10 +529,11 @@ main .button {
 
 }
 
+
 .reviews .container{
-    display: flex;
     align-items: center;
-    margin-top: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     overflow: hidden;
     flex-direction: column;
 }   
@@ -581,6 +569,7 @@ main .button {
     width: calc(350px * 4 + 60px);
     justify-content: space-between;
     overflow: hidden;
+    border-radius: 40px ;
 }
 
 .area-review{
@@ -591,7 +580,7 @@ main .button {
     padding: 18px;
     background-color: #fdfdfd;
     border: 1px solid #d4d4d4;
-    box-shadow: 0px 3000px 50px 5px #bebebe;
+    box-shadow: 0px 0px 50px 5px #bebebe;
 }
 
 .title{
@@ -627,5 +616,55 @@ main .button {
 
 .coment{
     margin-top: 10px;
+}
+
+
+/*ABOUT*/
+
+.aboutPerson {
+    box-shadow: inset 0px 0px 60px 5px #bebebe;
+    padding-bottom: 60PX;
+}
+.about{
+    display: flex;
+    align-content: center;
+    width: 1110px;
+    margin-top: 80px;
+
+}
+
+.content-about{
+    width: 590px;
+    color: #022e32;
+    font-weight: 100;
+    padding-left: 60px;
+}
+
+.content-about .a{
+    color: #ffeded;
+    font-size: 14px;
+    text-align: center;
+    height: 35px;
+    width: 155px;
+    align-content: center;
+    font-size: 16px;
+    background-color: #e7a4a4;
+    border-radius: 17px;
+}
+.content-about>h2{
+    font-size: 36px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.areaImgPerson{
+    width: 430px;
+    height: 565px;
+    background-position: center;
+}
+
+.areaImgPerson>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
 }
 
