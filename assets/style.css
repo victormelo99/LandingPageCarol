@@ -7,7 +7,7 @@
     list-style: none;
     box-sizing: border-box;
     text-decoration: none;
-    color: inherit;
+    color: #022e32;
     font-family: "Marcellus", serif;
 }
 
@@ -59,7 +59,7 @@ nav li a:hover,
 }
 
 .item a {
-    color: #f5a9a9;
+    color: #f59797;
     font-size: 20px;
 
 }
@@ -136,7 +136,7 @@ h2 {
 }
 
 .subtitle {
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 500;
 }
 
@@ -188,10 +188,14 @@ main .container {
     align-content: center;
 }
 
+.advertising-text>h2, .advertising-text>ul>li,.advertising-text>h2>strong,
+ .advertising-text>p,.advertising-text>p>strong{
+    color: #fff;
+}
 /*MAIN*/
 
 .content {
-    width: 911px;
+    width: 1000px;
     position: relative;
     text-align: start;
     padding: 50px 0px 50px 50px;
@@ -204,12 +208,12 @@ main .container {
 
 .content h2 {
     font-size: 35px;
-    width: 465px;
+    width: 575px;
     font-weight: 500;
 }
 
 .content p {
-    font-size: 20px;
+    font-size: 17px;
     width: 600px;
 }
 
@@ -385,10 +389,7 @@ main .button {
 /*adversiting*/
 
 .advertising{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
+    padding-top: 80px;
     background-image: url('../images/backGroundImgBlue.jpg');
 }
 
@@ -403,7 +404,6 @@ main .button {
     padding: 60px 17px;
     margin-left: 10px;
     flex-direction: column;
-    color: #fff;
 }
 
 .advertising .advertising-text h2{
@@ -505,7 +505,14 @@ main .button {
 
 .content2 .initial-text{
     font-size: 15px;
-
+    background-color:#fca0b4;
+    color: #ffe0de;
+    border-radius: 20px;
+    width: 220px;
+    height: 30px;
+    text-align: center;
+    align-content: center;
+    font-weight: 600;
 }
 
 .advertising2 h2{
