@@ -11,6 +11,10 @@
     font-family: "Marcellus", serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 h2{
     font-weight: 100;
 }
@@ -27,7 +31,11 @@ h2{
 /*cabeçalho*/
 
 header {
-    position: relative;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 nav {
@@ -65,10 +73,16 @@ nav li a:hover,
 }
 
 .languages {
-    margin-right: 27px;
-    margin-top: 8px;
+    display: flex;
+    margin-right: 30px;
+    width: 80px;
+    justify-content: space-between;
 }
 
+.languages>a>img{
+    width: 30px;
+    height: 30px;
+}
 .change {
     margin-top: 10px;
     font-size: 20px;
@@ -81,9 +95,9 @@ nav li a:hover,
     position: relative;
     display: flex;
     justify-content: center;
+    padding-top: 50px;
 }
 
-header:before,
 .initial:before {
     content: '';
     position: absolute;
@@ -233,7 +247,6 @@ main .container {
     font-size: 50px;
     font-weight: 100;
     margin-top: 15px;
-    color: #022e32;
 }
 
 .textTypeProcediments {
@@ -322,7 +335,6 @@ main .button {
     text-align: center;
     align-items: center;
     justify-content: center;
-    color: #022e32;
 }
 
 .contentCarrosel{
@@ -498,8 +510,6 @@ main .button {
     display: flex;
     flex-direction: column;
     width: 550px;
-    color: #022e32;
-
 }
 
 
@@ -551,7 +561,6 @@ main .button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #022e32;
     text-align: center;
 }
 .result>p{
@@ -643,7 +652,6 @@ main .button {
 
 .content-about{
     width: 590px;
-    color: #022e32;
     font-weight: 100;
     padding-left: 60px;
 }
@@ -723,5 +731,5 @@ footer{
 .all-rights-reserved{
     text-align: center;
     padding-top: 30px;
-    align-content: center   ;
+    align-content: center;
 }

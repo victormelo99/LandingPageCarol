@@ -6,8 +6,7 @@ arrowIcons = document.querySelectorAll('.contentCarrosel i');
 let isDragStart = false, isDragggin = false, prevPageX, prevScrollLeft, positionDiff;
 
 const showHidenIcons = () => {
-    //showing and hiding prev/next icon according to carousel scroll left value;
-    let scrollWidth = carousel.scrollWidth - carousel.clientWidth; //getting max scrollable width
+    let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
     arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
     arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
 
@@ -15,22 +14,19 @@ const showHidenIcons = () => {
 
 arrowIcons.forEach(icon => {
     icon.addEventListener('click', () => {
-        let firstImgWidth = firstImg.clientWidth + 14; //gettin first img widht e adding 14 margin value
-        //if clicked icon left, reduce width value from the carousel scroll left else add to it
+        let firstImgWidth = firstImg.clientWidth + 14;
         carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
-        setTimeout(() => showHidenIcons(), 60); //calling showHidenIcons after it
+        setTimeout(() => showHidenIcons(), 60); 
     });
 });
 
 const dragStart = (e) => {
-    //updatatin global variables value on mouse down event
     isDragStart = true;
     prevPageX = e.pageX || e.touches[0].pageX;
     prevScrollLeft = carousel.scrollLeft;
 }
 
 const dragging = (e) => {
-    // scrolling images/carousel to left according to mouse pointer
     if (!isDragStart) return;
     e.preventDefault();
     isDragggin = true;
@@ -98,3 +94,5 @@ startCarousel();
 
 carouselResult.addEventListener('mouseenter', () => clearInterval(autoScroll));
 carouselResult.addEventListener('mouseleave', startCarousel);
+
+

@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carolina</title>
     <link rel="stylesheet" href="assets/style.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <script src="https://static.elfsight.com/platform/platform.js" async></script>
 </head>
 
 <body>
@@ -15,22 +13,26 @@
         <div class="container">
             <nav>
                 <ul class="navegation">
-                    <li class="item"><a href="">Accueil</a></li>
-                    <li class="item"><a href="">Services</a></li>
-                    <li class="item"><a href="">Sur</a></li>
-                    <li class="item"><a href="">Contact</a></li>
+                    <li class="item"><a href="#Accueil">Accueil</a></li>
+                    <li class="item"><a href="#Services">Services</a></li>
+                    <li class="item"><a href="#Sur">Sur</a></li>
                 </ul>
             </nav>
             <div class="languages">
-                <a class="change" href="">Frances</a>
+                <a class="change" href="french.html">
+                    <img src="images/france_icon.svg" alt="Switch to French" loading="lazy">
+                </a>
+                <a class="change" href="english.html">
+                    <img src="images/united_state.svg" alt="Switch to English" loading="lazy">
+                </a>
             </div>
         </div>
     </header>
-    <section class="initial">
+    <section id="Accueil" class="initial">
         <div class="container">
             <div>
                 <div class="logoSpace">
-                    <img class="fullLogo" src="images/fullLogo.webp" alt="">
+                    <img class="fullLogo" src="images/fullLogo.webp" alt="logo"  loading="lazy" >
                 </div>
                 <div class="text">
                     <h2>Rajeunissez encore davantage.</h2>
@@ -64,7 +66,7 @@
             </button>
         </div>
     </section>
-    <main>
+    <main id="Services">
         <div class="container">
             <div class="content-main">
                 <p class="textTypeProcediments">Procédures réalisées</p>
@@ -303,7 +305,7 @@
             </button>
         </div>
     </section>
-    <section class="aboutPerson">
+    <section id="Sur" class="aboutPerson">
         <div class="container">
             <div class="about">
                 <div class="areaImgPerson">
@@ -357,6 +359,8 @@
             </div>
     </footer>
     <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/language.js" defer></script>
+
 </body>
 
 </html>
