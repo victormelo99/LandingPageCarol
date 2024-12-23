@@ -434,7 +434,9 @@ main .button {
     gap: 10px;
     padding-bottom: 15px; 
 }
-
+.advertising-text p{
+    color: #fff;
+}
 
 .advertising .advertising-text img{
     align-items: center;
