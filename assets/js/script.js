@@ -1,3 +1,26 @@
+//MENU MOBILE
+let btnMenu = document.getElementById('btn-menu');
+let menu = document.getElementById('menu-mobile');
+let overlay = document.getElementById('overlay');
+
+btnMenu.addEventListener('click', ()=>{
+    menu.classList.add('open-menu');
+    overlay.style.display = 'block';
+});
+
+menu.addEventListener('click', ()=>{
+    menu.classList.remove('open-menu');
+    overlay.style.display = 'none';
+
+});
+
+
+overlay.addEventListener('click', ()=>{
+    menu.classList.remove('open-menu');
+    overlay.style.display = 'none';
+
+});
+
 //CARROSEL RESULT
 const carousel = document.querySelector('.carousel');
 firstImg = carousel.querySelectorAll('img')[0];

@@ -12,6 +12,9 @@
 <body>
     <header>
         <div class="container">
+            <div class="btn-open-menu">
+                <button class="open" id="btn-menu"> <img src="images/list.svg" alt=""></button>
+            </div>
             <nav>
                 <ul class="navegation">
                     <li class="item"><a href="#Accueil" data-i18n="header.home">Accueil</a></li>
@@ -27,6 +30,27 @@
                     <img src="images/united_state.svg" alt="Switch to English" loading="lazy">
                 </a>
             </div>
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="content-up">
+                    <nav>
+                        <ul>
+                            <li><a href="#Accueil" data-i18n="header.home">Accueil</a></li>
+                            <li><a href="#Services" data-i18n="header.services">Services</a></li>
+                            <li><a href="#Sur" data-i18n="header.about">Sur</a></li>
+                        </ul>
+                    </nav>
+                    <button class="close"><img src="images/close.svg" alt=""></button>
+                </div>
+                <div class="languages">
+                    <a class="change" href="#" data-lang="fr">
+                        <img src="images/france_icon.svg" alt="Switch to French" loading="lazy">
+                    </a>
+                    <a class="change" href="#" data-lang="en">
+                        <img src="images/united_state.svg" alt="Switch to English" loading="lazy">
+                    </a>
+                </div>
+            </div>
+            <div class="overlay-menu" id="overlay"></div>
         </div>
     </header>
     <section id="Accueil" class="initial">
@@ -37,7 +61,8 @@
                 </div>
                 <div class="text">
                     <h2 data-i18n="slogan">Rajeunissez encore davantage.</h2>
-                    <h4 data-i18n="intro.subtitle" class="subtitle">Découvrez une nouvelle vous avec nos soins sur mesure: coupes tendance,
+                    <h4 data-i18n="intro.subtitle" class="subtitle">Découvrez une nouvelle vous avec nos soins sur
+                        mesure: coupes tendance,
                         épilation laser et soins visage pour un bien-être total.</h4>
                 </div>
                 <button class="contact">
@@ -53,12 +78,15 @@
     </section>
     <section class="advertising-text">
         <div class="content">
-            <h2 data-i18n="intro.subtitle2">Vous avez l'impression que votre peau ne reflète plus votre <strong>jeunesse ?</strong></h2>
-            <p  data-i18n="subtitle2">Avec le temps, le corps change, mais il est possible de préserver sa beauté et sa vitalité grâce à des
+            <h2 data-i18n="intro.subtitle2">Vous avez l'impression que votre peau ne reflète plus votre <strong>jeunesse
+                    ?</strong></h2>
+            <p data-i18n="subtitle2">Avec le temps, le corps change, mais il est possible de préserver sa beauté et sa
+                vitalité grâce à des
                 soins tels que de nouvelles coupes de cheveux, l’épilation au laser et des traitements faciaux pour
                 raviver l’éclat et la confiance.
                 </br></br></p>
-            <p class="focus" data-i18n="focus">Permettez-vous cette transformation! Prenez rendez-vous et sentez-vous renouvelée, belle
+            <p class="focus" data-i18n="focus">Permettez-vous cette transformation! Prenez rendez-vous et sentez-vous
+                renouvelée, belle
                 et confiante à toutes les étapes de la vie.</p>
             <button class="contact">
                 <a href="http://wa.me/32465454787" target="_blank" rel="noopener noreferrer" data-i18n="booking">
@@ -72,14 +100,16 @@
             <div class="content-main">
                 <p class="textTypeProcediments" data-i18n="typesProcediments">Procédures réalisées</p>
                 <h2 data-i18n="titleProcediments">Procédures exclusives pour <strong>chaque besoin</strong></h2>
-                <p data-i18n="subtitleProcediments">Chaque visage a une histoire, et chaque personne a besoin d'un traitement unique. <strong>Découvrez
+                <p data-i18n="subtitleProcediments">Chaque visage a une histoire, et chaque personne a besoin d'un
+                    traitement unique. <strong>Découvrez
                         nos procédures:</strong></p>
             </div>
             <div class="procedments">
                 <div class="card">
                     <img src="images/Hair.jpg" alt="Cabeleleira" loading="lazy">
                     <h1 data-i18n="titleCard1">Cheveux</h1>
-                    <p data-i18n="textCard1">Renouvelez votre apparence avec des coupes précises, des couleurs vibrantes et des modèles
+                    <p data-i18n="textCard1">Renouvelez votre apparence avec des coupes précises, des couleurs vibrantes
+                        et des modèles
                         uniques.</p>
                 </div>
                 <div class="card">
@@ -91,12 +121,13 @@
                 <div class="card">
                     <img src="images/skinCare.jpg" alt="Skin-Care" loading="lazy">
                     <h1 data-i18n="titleCard3">Traitement facial</h1>
-                    <p data-i18n="textCard3">Revitalisez votre peau avec une hydratation profonde et des traitements personnalisés.</p>
+                    <p data-i18n="textCard3">Revitalisez votre peau avec une hydratation profonde et des traitements
+                        personnalisés.</p>
                 </div>
             </div>
             <div class="button">
                 <button class="contact">
-                    <a href="http://wa.me/32465454787" target="_blank" rel="noopener noreferrer"  data-i18n="booking">
+                    <a href="http://wa.me/32465454787" target="_blank" rel="noopener noreferrer" data-i18n="booking">
                         Réservez votre créneau
                     </a>
                 </button>
@@ -106,7 +137,7 @@
     <section class="hero">
         <div class="container">
             <div class="textResult">
-                <p  data-i18n="initialResult">Résultats</p>
+                <p data-i18n="initialResult">Résultats</p>
                 <h2 data-i18n="titleResult">Transformations inspirantes</h2>
             </div>
             <div class="contentCarrosel">
@@ -143,22 +174,29 @@
                     <strong>Nos procédures offrent des avantages tels que:</strong>
                 </p><br>
                 <ul>
-                    <li><img src="images/icons8-seta-direita-32.jpg" alt="" loading="lazy"><p  data-i18n="liAdvertising">Mise en valeur de la beauté
-                        avec des coupes et des traitements personnalisés.</p></li>
-                    <li><img src="images/icons8-seta-direita-32.jpg" alt="" loading="lazy"><p data-i18n="liAdvertising2">Restauration de l’estime de
-                        soi et mise en valeur de votre identité unique.</p>
+                    <li><img src="images/icons8-seta-direita-32.jpg" alt="" loading="lazy">
+                        <p data-i18n="liAdvertising">Mise en valeur de la beauté
+                            avec des coupes et des traitements personnalisés.</p>
                     </li>
-                    <li><img src="images/icons8-seta-direita-32.jpg" alt="" loading="lazy" ><p data-i18n="liAdvertising3">Élimination des poils de
-                        manière durable et efficace.</p>
+                    <li><img src="images/icons8-seta-direita-32.jpg" alt="" loading="lazy">
+                        <p data-i18n="liAdvertising2">Restauration de l’estime de
+                            soi et mise en valeur de votre identité unique.</p>
                     </li>
-                    <li><img src="images/icons8-seta-direita-32.jpg" alt="" loading="lazy"><p  data-i18n="liAdvertising4">Peau plus douce et sans
-                        irritations.</p>
+                    <li><img src="images/icons8-seta-direita-32.jpg" alt="" loading="lazy">
+                        <p data-i18n="liAdvertising3">Élimination des poils de
+                            manière durable et efficace.</p>
                     </li>
-                    <li><img src="images/icons8-seta-direita-32.jpg" alt="" loading="lazy"><p data-i18n="liAdvertising4">Réduction des taches et des
-                        signes de vieillissement</p>
+                    <li><img src="images/icons8-seta-direita-32.jpg" alt="" loading="lazy">
+                        <p data-i18n="liAdvertising4">Peau plus douce et sans
+                            irritations.</p>
                     </li>
-                    <li><img src="images/icons8-seta-direita-32.jpg" alt="" loading="lazy"><p data-i18n="liAdvertising5">Revitalisation profonde de la
-                        peau avec une hydratation intensive</p>
+                    <li><img src="images/icons8-seta-direita-32.jpg" alt="" loading="lazy">
+                        <p data-i18n="liAdvertising4">Réduction des taches et des
+                            signes de vieillissement</p>
+                    </li>
+                    <li><img src="images/icons8-seta-direita-32.jpg" alt="" loading="lazy">
+                        <p data-i18n="liAdvertising5">Revitalisation profonde de la
+                            peau avec une hydratation intensive</p>
                     </li>
                 </ul>
                 <button class="contact">
@@ -187,9 +225,11 @@
                         Ici, nous sommes prêts à prendre soin de vous et à accompagner votre parcours, en vous offrant
                         une <strong>expérience unique et transformatrice</strong>.
                     </p><br>
-                    <p data-i18n="focusAdvertising2"><strong>Valorisons ensemble votre beauté à toutes les étapes de la vie.</strong></p>
+                    <p data-i18n="focusAdvertising2"><strong>Valorisons ensemble votre beauté à toutes les étapes de la
+                            vie.</strong></p>
                     <button class="contact">
-                        <a href="http://wa.me/32465454787" target="_blank" rel="noopener noreferrer" data-i18n="booking">
+                        <a href="http://wa.me/32465454787" target="_blank" rel="noopener noreferrer"
+                            data-i18n="booking">
                             Réservez votre créneau
                         </a>
                     </button>
@@ -316,7 +356,8 @@
                 <div class="content-about">
                     <p class="a">CAROLINA</p>
                     <h2 data-i18n="titleAbout">Qui suis-je</h2>
-                    <p data-i18n="textAbout">Au cours de mes 3 années en tant que coiffeuse et esthéticienne, j'ai <strong>découvert bien plus qu'une
+                    <p data-i18n="textAbout">Au cours de mes 3 années en tant que coiffeuse et esthéticienne, j'ai
+                        <strong>découvert bien plus qu'une
                             profession – j'ai trouvé l'opportunité de transformer des vies.</strong><br><br>
 
                         Je crois que la véritable beauté réside dans l'essence de chaque personne et que la valoriser de
@@ -331,7 +372,8 @@
                             allient santé, estime de soi et l'authenticité de chacun.</strong>
                     </p>
                     <button class="contact">
-                        <a href="http://wa.me/32465454787" target="_blank" rel="noopener noreferrer" data-i18n="booking">
+                        <a href="http://wa.me/32465454787" target="_blank" rel="noopener noreferrer"
+                            data-i18n="booking">
                             Réservez votre créneau
                         </a>
                     </button>

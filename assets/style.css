@@ -38,13 +38,13 @@ header {
     z-index: 1000;
 }
 
-nav {
+nav{
     flex: 1;
     display: flex;
     align-items: center
 }
 
-nav li a {
+nav li a{
     color: #fff;
     font-size: 20px;
 
@@ -89,6 +89,82 @@ nav li a:hover,
     color: #f5a9a9;
 }
 
+/*headerMobile*/
+
+.btn-open-menu>button{
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    padding-left: 20px;
+}
+
+.btn-open-menu>button>img{
+    width: 100%;
+    height: 100%;
+}
+.menu-mobile{
+    background-color: #00000057;
+    width: 0%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    overflow: hidden;
+    transition: .2s;
+}
+.menu-mobile.open-menu{
+    width: 70%;
+}
+.content-up{
+    display: flex;
+    padding: 20px 20px 0px 20px;
+}
+.content-up button{
+    background-color: transparent;
+    border: none;
+    width: 25px;
+    height: 25px;
+}
+.content-up button img{
+    width: 100%;
+    height: 100%;
+}
+
+.menu-mobile nav ul{
+    text-align: left;
+}
+
+.menu-mobile nav ul li{
+    padding-top: 30px;
+}
+
+.menu-mobile nav ul li{
+    color: #fff;
+    font-size: 20px;
+
+
+}
+.menu-mobile>.languages{
+    padding-left: 20px;
+    padding-top: 60px;
+}
+
+.menu-mobile>.languages> a{
+    padding-right: 20px;
+}
+.overlay-menu{
+    background-color: #00000086;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 88888;
+    display: none;
+}
 /*HOME*/
 
 .initial {
@@ -202,8 +278,7 @@ main .container {
     align-content: center;
 }
 
-.advertising-text>h2, .advertising-text>ul>li,.advertising-text>h2>strong,
- .advertising-text>p,.advertising-text>p>strong{
+.advertising-text>h2,.advertising-text>h2>strong,.advertising-text>p>strong{
     color: #fff;
 }
 /*MAIN*/
@@ -217,7 +292,9 @@ main .container {
     background-color: #f5e0e5;
     border-radius: 15px;
     border: 1px solid #f1cdd6;
-    box-shadow: 0 0 1px 1px #f1cdd6
+    box-shadow: 0 0 1px 1px #f1cdd6;
+    color: #022e32;
+
 }
 
 .content h2 {
@@ -226,13 +303,16 @@ main .container {
     font-weight: 500;
 }
 
-.content p {
+.advertising-text>.content p {
     font-size: 17px;
     width: 600px;
+    color: #022e32;
 }
 
 .focus {
     font-weight: 600;
+    color: #022e32;
+
 }
 
 .content-main {
@@ -734,4 +814,37 @@ footer{
     text-align: center;
     padding-top: 30px;
     align-content: center;
+}
+
+
+/* Responsiveness*/
+
+
+/* Small Phones */
+@media (min-width: 576px) and (max-width: 767.98px){
+
+}
+
+/* phones and some tablets*/
+
+@media (min-width: 768px) and (max-width: 991.98px){
+    
+}
+
+/*tablets*/
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+    
+}
+
+/* laptops*/
+
+@media (min-width: 1200) and (max-width: 1399.98px){
+    
+}
+
+/*Desktops*/
+
+@media (min-width: 576px){
+    
 }
