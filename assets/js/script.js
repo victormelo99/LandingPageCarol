@@ -5,18 +5,21 @@ let overlay = document.getElementById('overlay');
 
 btnMenu.addEventListener('click', ()=>{
     menu.classList.add('open-menu');
+    btnMenu.style.display = 'none';
     overlay.style.display = 'block';
 });
 
 menu.addEventListener('click', ()=>{
     menu.classList.remove('open-menu');
     overlay.style.display = 'none';
+    btnMenu.style.display = 'block';
 
 });
 
 
 overlay.addEventListener('click', ()=>{
     menu.classList.remove('open-menu');
+    btnMenu.style.display = 'block';
     overlay.style.display = 'none';
 
 });

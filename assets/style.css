@@ -11,11 +11,11 @@
     font-family: "Marcellus", serif;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-h2{
+h2 {
     font-weight: 100;
 }
 
@@ -38,13 +38,13 @@ header {
     z-index: 1000;
 }
 
-nav{
+nav {
     flex: 1;
     display: flex;
     align-items: center
 }
 
-nav li a{
+nav li a {
     color: #fff;
     font-size: 20px;
 
@@ -74,38 +74,32 @@ nav li a:hover,
 
 .languages {
     display: flex;
-    margin-right: 30px;
     width: 80px;
     justify-content: space-between;
 }
 
-.languages>a>img{
-    width: 30px;
-    height: 30px;
-}
-.change {
-    margin-top: 10px;
-    font-size: 20px;
-    color: #f5a9a9;
-}
-
+C
 /*headerMobile*/
 
-.btn-open-menu>button{
+header .btn-open-menu {
     display: none;
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
-    border: none;
-    padding-left: 20px;
+
 }
 
-.btn-open-menu>button>img{
+.btn-open-menu>button {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+}
+
+.btn-open-menu>button>img {
     width: 100%;
     height: 100%;
 }
-.menu-mobile{
-    background-color: #00000057;
+
+.menu-mobile {
+    background-color: #2220203a;;
     width: 0%;
     height: 100vh;
     position: fixed;
@@ -115,48 +109,67 @@ nav li a:hover,
     overflow: hidden;
     transition: .2s;
 }
-.menu-mobile.open-menu{
+
+.menu-mobile.open-menu {
     width: 70%;
 }
-.content-up{
+
+.content-up {
     display: flex;
     padding: 20px 20px 0px 20px;
 }
-.content-up button{
+
+.content-up button {
     background-color: transparent;
     border: none;
     width: 25px;
     height: 25px;
 }
-.content-up button img{
+
+.content-up button img {
     width: 100%;
     height: 100%;
 }
 
-.menu-mobile nav ul{
+.menu-mobile nav ul {
+    margin-top: -10px;
     text-align: left;
 }
 
-.menu-mobile nav ul li{
-    padding-top: 30px;
+.menu-mobile nav ul li {
+    padding-top: 50px;
+    gap: 10px;
 }
 
-.menu-mobile nav ul li{
-    color: #fff;
-    font-size: 20px;
-
+.menu-mobile nav ul li a{
+    font-size: 25px;
+    color: #e2b8b8;
 
 }
-.menu-mobile>.languages{
+.menu-mobile nav ul li a:hover{
+    color: #f59797;
+
+}
+
+.menu-mobile>.languages {
     padding-left: 20px;
     padding-top: 60px;
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.menu-mobile>.languages> a{
+.menu-mobile>.languages>a {
+    display: inline-block;
     padding-right: 20px;
 }
-.overlay-menu{
-    background-color: #00000086;
+
+.menu-mobile>.languages>a>img {
+    width: 40px;
+}
+
+.overlay-menu {
+    background-color: #00000036;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -165,6 +178,7 @@ nav li a:hover,
     z-index: 88888;
     display: none;
 }
+
 /*HOME*/
 
 .initial {
@@ -278,9 +292,12 @@ main .container {
     align-content: center;
 }
 
-.advertising-text>h2,.advertising-text>h2>strong,.advertising-text>p>strong{
+.advertising-text>h2,
+.advertising-text>h2>strong,
+.advertising-text>p>strong {
     color: #fff;
 }
+
 /*MAIN*/
 
 .content {
@@ -384,11 +401,12 @@ main .button {
 
 /*RESULTADOS*/
 
-.hero .container{
+.hero .container {
     align-items: center;
     flex-direction: column;
-    margin-top: -80px ;
+    margin-top: -80px;
 }
+
 .textResult {
     display: flex;
     margin-top: 150px;
@@ -417,14 +435,14 @@ main .button {
     justify-content: center;
 }
 
-.contentCarrosel{
+.contentCarrosel {
     display: flex;
     align-items: center;
     justify-content: center;
     min-width: 100vh;
 }
 
-.contentCarrosel i{
+.contentCarrosel i {
     background-color: #dddddd;
     width: 45px;
     height: 45px;
@@ -435,12 +453,12 @@ main .button {
     font-size: 1.2rem;
 }
 
-.wrapper{
+.wrapper {
     max-width: 1420px;
 
 }
 
-.wrapper .carousel{
+.wrapper .carousel {
     white-space: nowrap;
     cursor: pointer;
     font-size: 0px;
@@ -449,17 +467,17 @@ main .button {
 
 }
 
-.carousel.dragging{
+.carousel.dragging {
     cursor: grab;
     scroll-behavior: auto;
 
 }
 
-.carousel.dragging img{
+.carousel.dragging img {
     pointer-events: none;
 }
 
-.carousel img{
+.carousel img {
     height: 340px;
     object-fit: cover;
     margin-left: 14px;
@@ -467,30 +485,32 @@ main .button {
     border-radius: 10px;
 }
 
-.carousel img:first-child{
+.carousel img:first-child {
     margin-left: -15px;
 }
 
-.carousel img:last-child{
+.carousel img:last-child {
     margin-right: -15px;
 }
 
-.hero .button{
+.hero .button {
     margin-top: 30px;
 }
+
 /*adversiting*/
 
-.advertising{
+.advertising {
     padding-top: 80px;
     background-image: url('../images/backGroundImgBlue.jpg');
 }
 
-.advertising .container{
+.advertising .container {
     justify-content: space-between;
     padding-bottom: 100px;
 
 }
-.advertising .advertising-text{
+
+.advertising .advertising-text {
     display: flex;
     width: 600px;
     padding: 60px 17px;
@@ -498,51 +518,52 @@ main .button {
     flex-direction: column;
 }
 
-.advertising .advertising-text h2{
+.advertising .advertising-text h2 {
     font-size: 40px;
 }
 
 .advertising .advertising-text ul {
     list-style: none;
-    padding: 0; 
+    padding: 0;
     margin: 0;
 }
 
-.advertising .advertising-text li{
+.advertising .advertising-text li {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding-bottom: 15px; 
+    padding-bottom: 15px;
 }
-.advertising-text p{
+
+.advertising-text p {
     color: #fff;
 }
 
-.advertising .advertising-text img{
+.advertising .advertising-text img {
     align-items: center;
     align-content: center;
     display: block;
 }
 
-.advertising .advertising-text .contact{
+.advertising .advertising-text .contact {
     background-color: #fff;
     border: 1px solid #fff;
 }
 
-.advertising .advertising-text .contact>a{
+.advertising .advertising-text .contact>a {
     color: #022e32;
 }
 
-.advertising .advertising-text .contact:hover{
+.advertising .advertising-text .contact:hover {
     background-color: #fca0b4;
     border: 1px solid #fca0b4;
 }
 
-.advertising .advertising-text .contact>a:hover{
+.advertising .advertising-text .contact>a:hover {
     color: #fff;
 }
 
-.imgPerson2{
+.imgPerson2 {
     display: flex;
     margin-top: 60px;
     justify-content: center;
@@ -551,11 +572,11 @@ main .button {
     margin-right: 30px;
     height: 550px;
     width: 400px;
-    border-top-left-radius: 150px; 
+    border-top-left-radius: 150px;
     border-bottom-right-radius: 150px;
 }
 
-.imgPerson2>img{
+.imgPerson2>img {
     width: 100%;
     height: 100%;
     border-top-left-radius: 150px;
@@ -564,18 +585,19 @@ main .button {
 
 /*Adversiting 2*/
 
-.advertising2{
+.advertising2 {
     height: 450px;
     box-shadow: inset 0px 10px 50px -5px #bebebe;
-    
+
 }
-.advertising2 .container{
+
+.advertising2 .container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.content2{
+.content2 {
     display: flex;
     background-color: #eeeeee;
     position: relative;
@@ -588,16 +610,17 @@ main .button {
     box-shadow: inset 0px -10px 30px -5px #bebebe;
 
 }
-.advertising2-text{
+
+.advertising2-text {
     display: flex;
     flex-direction: column;
     width: 550px;
 }
 
 
-.content2 .initial-text{
+.content2 .initial-text {
     font-size: 15px;
-    background-color:#fca0b4;
+    background-color: #fca0b4;
     color: #ffe0de;
     border-radius: 20px;
     width: 220px;
@@ -607,45 +630,47 @@ main .button {
     font-weight: 600;
 }
 
-.advertising2 h2{
+.advertising2 h2 {
     font-size: 36px;
     font-weight: 100;
 }
 
-.content2 p{
+.content2 p {
     font-size: 15px;
 
 }
-.content2 .imgPerson3{
+
+.content2 .imgPerson3 {
     width: 500px;
     height: 400px;
     margin-left: 100px;
 }
 
-.imgPerson3>img{
+.imgPerson3>img {
     width: 100%;
-    height: 100%;    
+    height: 100%;
     border-radius: 50px;
 
 }
 
 
-.reviews .container{
+.reviews .container {
     align-items: center;
     padding-top: 80px;
     padding-bottom: 80px;
     overflow: hidden;
     flex-direction: column;
-}   
+}
 
-.reviews .result{
+.reviews .result {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
-.result>p{
+
+.result>p {
     color: #fff;
     font-size: 14px;
     height: 45px;
@@ -656,11 +681,12 @@ main .button {
     border-radius: 17px;
 }
 
-.result>h2{
+.result>h2 {
     margin-top: 20px;
     font-size: 50px;
 }
-.content-review{
+
+.content-review {
     display: flex;
     justify-content: center;
     padding: 50px;
@@ -668,10 +694,10 @@ main .button {
     width: calc(350px * 4 + 60px);
     justify-content: space-between;
     overflow: hidden;
-    border-radius: 40px ;
+    border-radius: 40px;
 }
 
-.area-review{
+.area-review {
     flex: 0 0 265px;
     width: 265px;
     height: 255px;
@@ -682,38 +708,40 @@ main .button {
     box-shadow: 0px 0px 50px 5px #bebebe;
 }
 
-.title{
+.title {
     display: flex;
     align-items: center;
 }
 
-.img-clients{
+.img-clients {
     height: 40px;
     width: 40px;
 }
 
-.text-title{
+.text-title {
     display: flex;
     flex-direction: column;
     align-content: center;
 }
-.text-title>p{
+
+.text-title>p {
     font-size: 15px;
     margin-left: 10px;
 }
-.text-title>time{
+
+.text-title>time {
     font-size: 10px;
     margin-left: 11px;
     margin-top: 5px;
 }
 
-.stars{
+.stars {
     margin-top: 10px;
     font-size: 17px;
     color: #facc00;
 }
 
-.coment{
+.coment {
     margin-top: 10px;
 }
 
@@ -724,7 +752,8 @@ main .button {
     box-shadow: inset 0px 0px 60px 5px #bebebe;
     padding-bottom: 60PX;
 }
-.about{
+
+.about {
     display: flex;
     align-content: center;
     width: 1110px;
@@ -732,13 +761,13 @@ main .button {
 
 }
 
-.content-about{
+.content-about {
     width: 590px;
     font-weight: 100;
     padding-left: 60px;
 }
 
-.content-about .a{
+.content-about .a {
     color: #ffeded;
     font-size: 14px;
     text-align: center;
@@ -749,29 +778,31 @@ main .button {
     background-color: #e7a4a4;
     border-radius: 17px;
 }
-.content-about>h2{
+
+.content-about>h2 {
     font-size: 36px;
     margin-top: 20px;
     font-weight: 600;
 }
-.areaImgPerson{
+
+.areaImgPerson {
     width: 430px;
     height: 565px;
     background-position: center;
 }
 
-.areaImgPerson>img{
+.areaImgPerson>img {
     width: 100%;
     height: 100%;
     border-radius: 25px;
 }
 
 /*FOOTER*/
-footer{
+footer {
     background-color: #f1e6e6;
 }
 
-.content-footer{
+.content-footer {
     display: flex;
     padding-top: 30px;
     justify-content: center;
@@ -780,37 +811,38 @@ footer{
     width: 1200px;
 }
 
-.content-footer>img{
+.content-footer>img {
     width: 100px;
     height: 100px;
     padding-bottom: 20px;
 }
 
-.content-footer>h2{
+.content-footer>h2 {
     font-size: 36px;
 }
 
-.contact-footer{
+.contact-footer {
     display: flex;
     align-content: center;
     align-items: center;
 }
 
-.contact-footer .whatsappicon{
+.contact-footer .whatsappicon {
     width: 15px;
     height: 15px;
 }
 
-.insta{
+.insta {
     padding-top: 10px;
     width: 50px;
     height: 50px;
 }
-.contact-footer>p{
+
+.contact-footer>p {
     font-family: "Manrope", serif;
 }
 
-.all-rights-reserved{
+.all-rights-reserved {
     text-align: center;
     padding-top: 30px;
     align-content: center;
@@ -821,30 +853,44 @@ footer{
 
 
 /* Small Phones */
-@media (min-width: 576px) and (max-width: 767.98px){
+@media (min-width: 370px) and (max-width: 767.9808px) {
 
+    nav .navegation,
+    .languages {
+        display: none;
+    }
+
+    header .btn-open-menu {
+        display: block;
+    }
+
+    .initial>.container,.logoSpace,.text {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .person {
+        display: none;
+    }
+
+    .container .text {
+        width: 21.875rem;
+    }
 }
 
 /* phones and some tablets*/
 
-@media (min-width: 768px) and (max-width: 991.98px){
-    
-}
+@media (min-width: 768px) and (max-width: 991.9808px) {}
 
 /*tablets*/
 
-@media (min-width: 992px) and (max-width: 1199.98px){
-    
-}
+@media (min-width: 992px) and (max-width: 1199.9808px) {}
 
 /* laptops*/
 
-@media (min-width: 1200) and (max-width: 1399.98px){
-    
-}
+@media (min-width: 1200) and (max-width: 1399.9808px) {}
 
 /*Desktops*/
 
-@media (min-width: 576px){
-    
-}
+@media (min-width: 1400px) {}
