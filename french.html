@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carolina</title>
+    <link rel="stylesheet" href="assets/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="btn-open-menu">
+                <button class="open" id="btn-menu"> <img src="images/list.svg" alt=""></button>
+            </div>
+            <nav>
+                <ul class="navegation">
+                    <li class="item"><a href="#Accueil" data-i18n="header.home">Accueil</a></li>
+                    <li class="item"><a href="#Services" data-i18n="header.services">Services</a></li>
+                    <li class="item"><a href="#Sur" data-i18n="header.about">Sur</a></li>
+                </ul>
+            </nav>
+            <div class="languages">
+                <a class="change" href="#" data-lang="fr">
+                    <img src="images/france_icon.svg" alt="Switch to French">
+                </a>
+                <a class="change" href="#" data-lang="en">
+                    <img src="images/united_state.svg" alt="Switch to English">
+                </a>
+            </div>
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="content-up">
+                    <nav>
+                        <ul>
+                            <li><a href="#Accueil" data-i18n="header.home">Accueil</a></li>
+                            <li><a href="#Services" data-i18n="header.services">Services</a></li>
+                            <li><a href="#Sur" data-i18n="header.about">Sur</a></li>
+                        </ul>
+                    </nav>
+                    <button class="close"><img src="images/close.svg" alt=""></button>
+                </div>
+                <div class="languages">
+                    <a class="change" href="#" data-lang="fr">
+                        <img src="images/france_icon.svg" alt="Switch to French" loading="lazy">
+                    </a>
+                    <a class="change" href="#" data-lang="en">
+                        <img src="images/united_state.svg" alt="Switch to English" loading="lazy">
+                    </a>
+                </div>
+            </div>
+            <div class="overlay-menu" id="overlay"></div>
+        </div>
+    </header>
+    <section id="Accueil" class="initial">
+        <div class="container">
+            <div>
+                <div class="logoSpace">
+                    <img class="fullLogo" src="images/fullLogo.webp" alt="logo" loading="lazy">
+                </div>
+                <div class="text">
+                    <h2 data-i18n="slogan">Rajeunissez encore davantage.</h2>
+                    <h4 data-i18n="intro.subtitle" class="subtitle">Découvrez une nouvelle vous avec nos soins sur mesure: coupes tendance, épilation laser et soins visage pour un bien-être total.</h4>
+                </div>
+                <button class="contact">
+                    <a href="http://wa.me/32465454787" target="_blank" rel="noopener noreferrer" data-i18n="booking">
+                        Réservez votre créneau
+                    </a>
+                </button>
+            </div>
+            <div class="person">
+                <img class="imgPerson" src="images/imgPerson.jpg" alt="imgPerson" loading="lazy">
+            </div>
+        </div>
+    </section>
+    <section class="advertising-text">
+        <div class="content">
+            <h2 data-i18n="intro.subtitle2">Vous avez l'impression que votre peau ne reflète plus votre <strong>jeunesse
+                    ?</strong></h2>
+            <p data-i18n="subtitle2">Avec le temps, le corps change, mais il est possible de préserver sa beauté et sa
+                vitalité grâce à des
+                soins tels que de nouvelles coupes de cheveux, l’épilation au laser et des traitements faciaux pour
+                raviver l’éclat et la confiance.
+                </br></br></p>
+            <p class="focus" data-i18n="focus">Permettez-vous cette transformation! Prenez rendez-vous et sentez-vous
+                renouvelée, belle
+                et confiante à toutes les étapes de la vie.</p>
+            <button class="contact">
+                <a href="http://wa.me/32465454787" target="_blank" rel="noopener noreferrer" data-i18n="booking">
+                    Réservez votre créneau
+                </a>
+            </button>
+        </div>
+    </section>
+    <main id="Services">
+        <div class="container">
+            <div class="content-main">
+                <p class="textTypeProcediments" data-i18n="typesProcediments">Procédures réalisées</p>
+                <h2 data-i18n="titleProcediments">Procédures exclusives pour <strong>chaque besoin</strong></h2>
+                <p data-i18n="subtitleProcediments">Chaque visage a une histoire, et chaque personne a besoin d'un
+                    traitement unique. <strong>Découvrez
+                        nos procédures:</strong></p>
+            </div>
+            <div class="procedments" id="carousel">
+                <button class="btn-prev-card" aria-label="Previous slide"><img src="images/left.svg" alt=""></button>
+                <div class="carrosel-card">
+                    <div class="card">
+                        <img src="images/Hair.jpg" alt="Cabeleleira" loading="lazy">
+                        <h1 data-i18n="titleCard1">Cheveux</h1>
+                        <p data-i18n="textCard1">Renouvelez votre apparence avec des coupes précises, des couleurs
+                            vibrantes
+                            et des modèles
+                            uniques.</p>
+                    </div>
+                    <div class="card">
+                        <img src="images/laser.jpg" alt="Depilação" loading="lazy">
+                        <h1 data-i18n="titleCard2">Épilation au laser</h1>
+                        <p data-i18n="textCard2">Assurez-vous une peau douce et sans poils avec des résultats durables.
+                        </p>
+
+                    </div>
+                    <div class="card">
+                        <img src="images/skinCare.jpg" alt="Skin-Care" loading="lazy">
+                        <h1 data-i18n="titleCard3">Traitement facial</h1>
+                        <p data-i18n="textCard3">Revitalisez votre peau avec une hydratation profonde et des traitements
+                            personnalisés.</p>
+                    </div>
+                </div>
+                <button class="btn-next-card" aria-label="Next slide"><img src="images/right.svg" alt=""></button>
+            </div>
+            <div class="button">
+                <button class="contact">
+                    <a href="http://wa.me/32465454787" target="_blank" rel="noopener noreferrer" data-i18n="booking">
+                        Réservez votre créneau
+                    </a>
+                </button>
+            </div>
+        </div>
+    </main>
+    <section class="hero">
+        <div class="container">
+            <div class="textResult">
+                <p data-i18n="initialResult">Résultats</p>
+                <h2 data-i18n="titleResult">Transformations inspirantes</h2>
+            </div>
+            <div class="contentCarrosel">
+                <i id="left" class="fa-solid fa-angle-left"></i>
+                <div class="wrapper">
+                    <div id="hide" class="carousel">
+                        <div class="carousel-item"><img src="images/result-hair1.jpg" alt="" draggable="false"
+                                loading="lazy"></div>
+                        <div class="carousel-item"><img src="images/hair-result2.jpg" alt="" draggable="false"
+                                loading="lazy"></div>
+                        <div class="carousel-item"><img src="images/laser-result1.jpg" alt="" draggable="false"
+                                loading="lazy"></div>
+                        <div class="carousel-item"><img src="images/laser-result2.jpg" alt="" draggable="false"
+                                loading="lazy"></div>
+                        <div class="carousel-item"><img src="images/skinCare-resul1.jpg" alt="" draggable="false"
+                                loading="lazy"></div>
+                        <div class="carousel-item"><img src="images/skinCare-result2.jpg" alt="" draggable="false"
+                                loading="lazy"></div>
+                    </div>
+                </div>
+                <i id="right" class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="button">
+                <button class="contact">
+                    <a href="http://wa.me/32465454787" target="_blank" rel="noopener noreferrer" data-i18n="booking">
+                        Réservez votre créneau
+                    </a>
+                </button>
+            </div>
+        </div>
+    </section>
+    <Section class="advertising">
+        <div class="container">
+            <div class="advertising-text">
+                <h2 data-i18n="titleAdvertising">
+                    Résultats incroyables avec <strong>naturel et excellence</strong>
+                </h2><br>
+                <p class="description" data-i18n="subtitleAdvertising">
+                    Avec nos traitements esthétiques, vous pouvez rajeunir sans perdre votre identité.
+                    <strong>Nos procédures offrent des avantages tels que:</strong>
+                </p><br>
+                <ul>
+                    <li><img src="images/icons8-seta-direita-32.jpg" alt="" loading="lazy">
+                        <p data-i18n="liAdvertising">Mise en valeur de la beauté
+                            avec des coupes et des traitements personnalisés.</p>
+                    </li>
+                    <li><img src="images/icons8-seta-direita-32.jpg" alt="" loading="lazy">
+                        <p data-i18n="liAdvertising2">Restauration de l’estime de
+                            soi et mise en valeur de votre identité unique.</p>
+                    </li>
+                    <li><img src="images/icons8-seta-direita-32.jpg" alt="" loading="lazy">
+                        <p data-i18n="liAdvertising3">Élimination des poils de
+                            manière durable et efficace.</p>
+                    </li>
+                    <li><img src="images/icons8-seta-direita-32.jpg" alt="" loading="lazy">
+                        <p data-i18n="liAdvertising4">Peau plus douce et sans
+                            irritations.</p>
+                    </li>
+                    <li><img src="images/icons8-seta-direita-32.jpg" alt="" loading="lazy">
+                        <p data-i18n="liAdvertising5">Réduction des taches et des signes de vieillissement</p>
+                    </li>
+                    <li><img src="images/icons8-seta-direita-32.jpg" alt="" loading="lazy">
+                        <p data-i18n="liAdvertising6">Revitalisation profonde de la
+                            peau avec une hydratation intensive</p>
+                    </li>
+                </ul>
+                <button class="contact">
+                    <a href="http://wa.me/32465454787" target="_blank" rel="noopener noreferrer" data-i18n="booking">
+                        Réservez votre créneau
+                    </a>
+                </button>
+            </div>
+            <div class="imgPerson2"><img src="images/imgPerson2.webp" alt="" loading="lazy"></div>
+        </div>
+    </Section>
+    <section class="advertising2">
+        <div class="container">
+            <div class="content2">
+                <div class="advertising2-text">
+                    <h2 class="initial-text" data-i18n="initialText">NATURALITÉ ET BEAUTÉ</h2>
+                    <h2 data-i18n="titleAdvertising2">Votre <strong>Beauté</strong>, Notre <strong>Mission</strong></h2>
+                    <p data-i18n="subtitleAdvertising2">
+                        Chaque étape de la vie apporte des <strong>changements</strong>, mais il est possible de
+                        préserver sa <strong>beauté et sa confiance.</strong>
+                    </p><br>
+                    <p data-i18n="textAdvertising2">
+                        Notre engagement est de vous offrir des traitements qui <strong>respectent votre
+                            individualité</strong> et mettent en valeur le meilleur de vous-même, de manière naturelle
+                        et harmonieuse.
+                        Ici, nous sommes prêts à prendre soin de vous et à accompagner votre parcours, en vous offrant
+                        une <strong>expérience unique et transformatrice</strong>.
+                    </p><br>
+                    <p data-i18n="focusAdvertising2"><strong>Valorisons ensemble votre beauté à toutes les étapes de la
+                            vie.</strong></p>
+                    <button class="contact">
+                        <a href="http://wa.me/32465454787" target="_blank" rel="noopener noreferrer"
+                            data-i18n="booking">
+                            Réservez votre créneau
+                        </a>
+                    </button>
+                </div>
+                <div class="imgPerson3"><img src="images/imgPerson3.jpg" alt=""></div>
+            </div>
+        </div>
+    </section>
+    <section class="reviews">
+        <div class="container">
+            <div class="result">
+                <p data-i18n="initialResult">Témoignages</p>
+                <h2 data-i18n="titleResult">Ce que disent nos clients</h2>
+            </div>
+            <div class="content-review carouselResult">
+                <div class="area-review">
+                    <div class="title">
+                        <img class="img-clients" src="images/img-coment--person/icon-coment1.jpg" alt="">
+                        <div class="text-title">
+                            <p><Strong>Iris Villasboa</Strong></p>
+                            <time datetime="2024/12/17">17-12-2024</time>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <p><strong>★★★★★</strong></p>
+                    </div>
+                    <p class="coment">
+                        Excelente atendimiento,un ambiente muy confortable y agradable,desde la primera
+                        sesión ya he tenido buenisimos resultados,excelente servicio,recomiendo!!🤩
+                    </p>
+                </div>
+                <div class="area-review">
+                    <div class="title">
+                        <img class="img-clients" src="images/img-coment--person/icon-coment2.jpg" alt="">
+                        <div class="text-title">
+                            <p><Strong>Brenda O</Strong></p>
+                            <time datetime="2024/12/10">10-12-2024</time>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <p><strong>★★★★★</strong></p>
+                    </div>
+                    <p class="coment">
+                        Excelente servicio al cliente, muy profesional y el establecimiento muy lindo.
+                    </p>
+                </div>
+                <div class="area-review">
+                    <div class="title">
+                        <img class="img-clients" src="images/img-coment--person/icon-coment3.jpg" alt="">
+                        <div class="text-title">
+                            <p><Strong>NATHALIA FERREIRA</Strong></p>
+                            <time datetime="2024/12/17">17-12-2024</time>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <p><strong>★★★★★</strong></p>
+                    </div>
+                    <p class="coment">
+                        Um lugar maravilhoso e aconchegante pra um dia de beleza. 🫶🏻🥰
+                    </p>
+                </div>
+                <div class="area-review">
+                    <div class="title">
+                        <img class="img-clients" src="images/img-coment--person/icon-coment4.jpg" alt="">
+                        <div class="text-title">
+                            <p><Strong>Luiz_Tifi 11</Strong></p>
+                            <time datetime="2024/12/10">10-12-2024</time>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <p><strong>★★★★★</strong></p>
+                    </div>
+                    <p class="coment">
+                        Super contente du résultat, comme je l'ai demandé je l'ai eu, je le recommande et je vous dis
+                        que vous pouvez y aller les yeux fermés.
+                        Ils sont très professionnels - Recommandé !!
+                    </p>
+                </div>
+                <div class="area-review">
+                    <div class="title">
+                        <img class="img-clients" src="images/img-coment--person/icon-coment5.jpg" alt="">
+                        <div class="text-title">
+                            <p><Strong>Angela Mármol</Strong></p>
+                            <time datetime="2024/12/17">17-12-2024</time>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <p><strong>★★★★★</strong></p>
+                    </div>
+                    <p class="coment">
+                        Super recomendado el lugar muy buen servicio el atendimiento 10/10 muy buena atención al cliente
+                    </p>
+                </div>
+                <div class="area-review">
+                    <div class="title">
+                        <img class="img-clients" src="images/img-coment--person/icon-coment6.jpg" alt="">
+                        <div class="text-title">
+                            <p><Strong>Samuel Villalba</Strong></p>
+                            <time datetime="2024/12/17">17-12-2024</time>
+                        </div>
+                    </div>
+                    <div class="stars">
+                        <p><strong>★★★★★</strong></p>
+                    </div>
+                    <p class="coment">
+                        Super indicado esse local profissional, fiz a depilação a laser tive um resultado excelente em
+                        apenas 6 seções
+                    </p>
+                </div>
+            </div>
+            <button class="contact">
+                <a href="http://wa.me/32465454787" target="_blank" rel="noopener noreferrer" data-i18n="booking">
+                    Réservez votre créneau
+                </a>
+            </button>
+        </div>
+    </section>
+    <section id="Sur" class="aboutPerson">
+        <div class="container">
+            <div class="areaImgPerson">
+                <img src="images/imgPersonAbout.webp" alt="">
+            </div>
+            <div class="content-about">
+                <p class="a">CAROLINA</p>
+                <h2 data-i18n="titleAbout">Qui suis-je</h2>
+                <p data-i18n="textAbout">Au cours de mes 3 années en tant que coiffeuse et esthéticienne, j'ai
+                    <strong>découvert bien plus qu'une
+                        profession – j'ai trouvé l'opportunité de transformer des vies.</strong><br><br>
+
+                    Je crois que la véritable beauté réside dans l'essence de chaque personne et que la valoriser de
+                    manière unique <strong>est le chemin pour renforcer la confiance et le bien-être.</strong>
+                    <br><br>
+
+                    Mon travail va au-delà des coupes et des traitements esthétiques:
+                    il s'agit d'offrir à mes clients des moments de soin et de transformation, en mettant en valeur
+                    leur beauté avec naturel et style.<br><br>
+
+                    Avec une approche dédiée et personnalisée, mon objectif est <strong>de fournir des résultats qui
+                        allient santé, estime de soi et l'authenticité de chacun.</strong>
+                </p>
+                <button class="contact">
+                    <a href="http://wa.me/32465454787" target="_blank" rel="noopener noreferrer" data-i18n="booking">
+                        Réservez votre créneau
+                    </a>
+                </button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="content-footer">
+                <img src="images/logo.svg" alt="">
+                <h2>Contact</h2>
+                <div class="contact-footer">
+                    <p><img class="whatsappicon" src="images/whatsappicon.svg" alt=""> +32 465 45 47 87</p>
+                </div>
+                <div class="insta">
+                    <a href="https://www.instagram.com/carolrodriguez.z?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        target="_blank" rel="noopener noreferrer">
+                        <img class="insta" src="images/instagram-icon.svg" alt="Instagram">
+                    </a>
+                </div>
+                <div class="all-rights-reserved">
+                    <p data-i18n="textBrand">Carolina Coiffeuse Esthetique ©</p><br>
+                    <p data-i18n="rightsReserved">Tous droits réservés</p>
+                </div>
+            </div>
+    </footer>
+    <script src="https://unpkg.com/i18next@21.6.12/i18next.min.js"></script>
+    <script src="assets/js/language.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+</body>
+
+</html>
