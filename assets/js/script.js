@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         prevTranslate = currentTranslate;
         carouselCard.style.transform = `translateX(${currentTranslate}px)`;
     }
-    
+
     if (nextButton && prevButton) {
         nextButton.addEventListener('click', () => {
             if (currentIndex < carouselCard.querySelectorAll('.card').length - 1) {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateCardPosition();
             }
         });
-    
+
 
         prevButton.addEventListener('click', () => {
             if (currentIndex > 0) {
@@ -69,105 +69,107 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-    //CARROSEL RESULT
+//CARROSEL RESULT
 
-    const carousel = document.querySelector('.carousel');
-    firstImg = carousel.querySelectorAll('img')[0];
-    arrowIcons = document.querySelectorAll('.contentCarrosel i');
-    
-    let isDragStart = false, isDragggin = false, prevPageX, prevScrollLeft, positionDiff;
-    
-    arrowIcons.forEach(icon => {
-        icon.addEventListener('click', () => {
-            let firstImgWidth = firstImg.clientWidth + 20;
-            carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth; 
-        });
+const carousel = document.querySelector('.carousel');
+firstImg = carousel.querySelectorAll('img')[0];
+arrowIcons = document.querySelectorAll('.contentCarrosel i');
+
+let isDragStart = false, isDragggin = false, prevPageX, prevScrollLeft, positionDiff;
+
+arrowIcons.forEach(icon => {
+    icon.addEventListener('click', () => {
+        let firstImgWidth = firstImg.clientWidth + 20;
+        carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
     });
-    
-    const dragStart = (e) => {
-        isDragStart = true;
-        prevPageX = e.pageX || e.touches[0].pageX;
-        prevScrollLeft = carousel.scrollLeft;
+});
+
+const dragStart = (e) => {
+    isDragStart = true;
+    prevPageX = e.pageX || e.touches[0].pageX;
+    prevScrollLeft = carousel.scrollLeft;
+}
+
+const dragging = (e) => {
+    if (!isDragStart) return;
+    e.preventDefault();
+    isDragggin = true;
+    carousel.classList.add("dragging");
+    positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+    carousel.scrollLeft = prevScrollLeft - positionDiff;
+};
+
+const dragStop = () => {
+    isDragStart = false;
+    carousel.classList.remove("dragging");
+
+    if (!isDragggin) return;
+    isDragggin = false;
+}
+
+carousel.addEventListener('mousedown', dragStart);
+carousel.addEventListener('touchstart', dragStart);
+
+carousel.addEventListener('mousemove', dragging);
+carousel.addEventListener('touchmove', dragging);
+
+carousel.addEventListener('mouseup', dragStop);
+carousel.addEventListener('mouseleave', dragStop);
+carousel.addEventListener('touchend', dragStop);
+
+//AUTOMATIC CARROSEL REVIEW
+
+const carouselResult = document.querySelector('.carouselResult');
+const firstItem = carouselResult.querySelector('.area-review');
+
+let autoScroll;
+
+const calculateItemWidth = () => {
+    const baseWidth = 0;
+    if (window.innerWidth <= 991.98) {
+        return baseWidth + 20;
+    } else if (window.innerWidth > 991.98 && window.innerWidth < 1399.99) {
+        return baseWidth + 50;
+    } else if (window.innerWidth >= 1400) {
+        return baseWidth + 100;
     }
-    
-    const dragging = (e) => {
-        if (!isDragStart) return;
-        e.preventDefault();
-        isDragggin = true;
-        carousel.classList.add("dragging");
-        positionDiff = (e.pageX ||  e.touches[0].pageX) - prevPageX;
-        carousel.scrollLeft = prevScrollLeft - positionDiff;
-    };
-    
-    const dragStop = () => {
-        isDragStart = false;
-        carousel.classList.remove("dragging");
-    
-        if(!isDragggin) return;
-        isDragggin = false;
-    }
-    
-    carousel.addEventListener('mousedown', dragStart);
-    carousel.addEventListener('touchstart', dragStart);
-    
-    carousel.addEventListener('mousemove', dragging);
-    carousel.addEventListener('touchmove', dragging);
-    
-    carousel.addEventListener('mouseup', dragStop);
-    carousel.addEventListener('mouseleave', dragStop);
-    carousel.addEventListener('touchend', dragStop);
-    
-    //AUTOMATIC CARROSEL REVIEW
+};
 
-    const carouselResult = document.querySelector('.carouselResult');
-    const firstItem = carouselResult.querySelector('.area-review');
+const itemWidth = firstItem.offsetWidth + calculateItemWidth();
 
-    let autoScroll;
+carouselResult.style.scrollBehavior = 'smooth';
 
-    const calculateItemWidth = () => {
-        const baseWidth = 0;
-        if (window.innerWidth <=  991.98) {
-            return baseWidth + 20;
-        } else if (window.innerWidth >= 1400) {
-            return baseWidth+ 100;
+const smoothScrollToStart = () => {
+    const scrollStep = carouselResult.scrollWidth / 60;
+    const interval = setInterval(() => {
+        if (carouselResult.scrollLeft <= 0) {
+            clearInterval(interval);
+        } else {
+            carouselResult.scrollLeft -= scrollStep;
         }
-    };
+    }, 20);
+};
 
-    const itemWidth = firstItem.offsetWidth + calculateItemWidth();
+const startCarousel = () => {
+    autoScroll = setInterval(() => {
+        carouselResult.scrollBy({ left: itemWidth, behavior: 'smooth' });
 
-    carouselResult.style.scrollBehavior = 'smooth';
-
-    const smoothScrollToStart = () => {
-        const scrollStep = carouselResult.scrollWidth / 60;
-        const interval = setInterval(() => {
-            if (carouselResult.scrollLeft <= 0) {
-                clearInterval(interval);
-            } else {
-                carouselResult.scrollLeft -= scrollStep;
-            }
-        }, 20);
-    };
-
-    const startCarousel = () => {
-        autoScroll = setInterval(() => {
-            carouselResult.scrollBy({ left: itemWidth, behavior: 'smooth' });
-    
-            if (carouselResult.scrollLeft + carouselResult.clientWidth >= carouselResult.scrollWidth) {
-                clearInterval(autoScroll);
+        if (carouselResult.scrollLeft + carouselResult.clientWidth >= carouselResult.scrollWidth) {
+            clearInterval(autoScroll);
+            setTimeout(() => {
+                carouselResult.style.scrollBehavior = 'auto';
+                smoothScrollToStart();
                 setTimeout(() => {
-                    carouselResult.style.scrollBehavior = 'auto';
-                    smoothScrollToStart();
-                    setTimeout(() => {
-                        carouselResult.style.scrollBehavior = 'smooth';
-                        startCarousel();
-                    }, 3000);
-                }, 1500);
-            }
-        }, 2000);
-    };
-    startCarousel();
+                    carouselResult.style.scrollBehavior = 'smooth';
+                    startCarousel();
+                }, 3000);
+            }, 1500);
+        }
+    }, 2000);
+};
+startCarousel();
 
-    carouselResult.addEventListener('mouseenter', () => clearInterval(autoScroll));
-    carouselResult.addEventListener('mouseleave', startCarousel);
+carouselResult.addEventListener('mouseenter', () => clearInterval(autoScroll));
+carouselResult.addEventListener('mouseleave', startCarousel);
 
 
