@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     "subtitleProcediments": `Chaque visage a une histoire, et chaque personne a besoin d'un traitement unique. <strong>Découvrez nos procédures:</strong>`,
                     "titleCard1":`Cheveux`,
                     "textCard1":`Renouvelez votre apparence avec des coupes précises, des couleurs vibrantes et des modèles uniques.`,
-                    "titleCard2":`Épilation au laser`,
+                    "titleCard2":`Épilation au laser Diode`,
                     "textCard2":`Assurez-vous une peau douce et sans poils avec des résultats durables.`,
                     "titleCard3":`Traitement facial`,
                     "textCard3":`Revitalisez votre peau avec une hydratation profonde et des traitements personnalisés.`,
